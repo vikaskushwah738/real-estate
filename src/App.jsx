@@ -5,10 +5,17 @@ import Singin from './pages/Singin';
 import Singout from './pages/Singout';
 import Singup from './pages/Singup';
 import Profile from './pages/Profile';
+import Header from './components/Header';
+import Footer from './components/footer';
+import Carousel from './components/Carousel';
 
 
 export default function App() {
   return <BrowserRouter>
+  <Header/>
+  <div className="h-screen flex justify-center items-center">
+      <Carousel/>
+    </div>
   <Routes>
   <Route path="/" element ={<Home />}/>
   <Route path="/about" element ={<About />}/>
@@ -18,5 +25,6 @@ export default function App() {
   <Route path="/profile" element ={<Profile />}/>
 
   </Routes>
+  <Footer/>
   </BrowserRouter>
 }
